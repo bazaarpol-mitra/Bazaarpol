@@ -1,27 +1,184 @@
+
+
 <!doctype html>
 <html lang="fa" dir="rtl">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>بازارپل | بازار عمده‌فروشی مطمئن</title>
+<meta name="description" content="بازارپل؛ پلتفرم خرید و فروش عمده و ارتباط امن بین خریداران عمده و تأمین‌کنندگان.">
+<meta name="keywords" content="خرید عمده, فروش عمده, تأمین کننده, بازار عمده فروشی, بازارپل, عمده فروشی ایران">
+<title>بازارپل | پل امن خرید و فروش عمده</title>
+
 <style>
 *{box-sizing:border-box}
-body{margin:0;font-family:tahoma,Arial;background:#f5f7f6;color:#173b32}
-header{background:linear-gradient(135deg,#075f43,#0b8a61);color:#fff;padding:35px 20px;text-align:center}
-.logo{font-size:38px;font-weight:bold}
-header p{font-size:17px}
-main{max-width:760px;margin:auto;padding:20px}
-.hero,.box{background:#fff;border-radius:22px;padding:25px;margin:18px 0;box-shadow:0 6px 25px #00000012}
-.hero{text-align:center}
-h2{margin-top:0;color:#075f43}
-button{width:100%;padding:17px;margin:7px 0;border:0;border-radius:13px;font-size:16px;font-weight:bold}
-.buy{background:#08734f;color:white}
-.seller{background:#e8b94b;color:#173b32}
-input,select,textarea{width:100%;padding:14px;margin:7px 0;border:1px solid #ddd;border-radius:11px;font-family:tahoma}
-.features{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.feature{background:#f0f7f4;padding:18px;border-radius:15px;text-align:center}
-footer{text-align:center;padding:25px;color:#777}
-.hidden{display:none}
+
+body{
+margin:0;
+font-family:tahoma,Arial,sans-serif;
+background:#f5f7f6;
+color:#173b32;
+line-height:1.8
+}
+
+header{
+background:linear-gradient(135deg,#064f39,#0b8a61);
+color:white;
+padding:28px 18px;
+text-align:center
+}
+
+.logo{
+font-size:36px;
+font-weight:bold
+}
+
+header p{
+margin:5px 0 0;
+font-size:16px
+}
+
+main{
+max-width:850px;
+margin:auto;
+padding:15px
+}
+
+.card{
+background:white;
+border-radius:22px;
+padding:22px;
+margin:16px 0;
+box-shadow:0 6px 25px #00000012
+}
+
+.hero{
+text-align:center;
+padding:28px 20px
+}
+
+.hero h1{
+font-size:27px;
+color:#075f43;
+margin:5px 0 12px
+}
+
+.hero p{
+color:#555
+}
+
+button{
+width:100%;
+padding:15px;
+margin:7px 0;
+border:0;
+border-radius:13px;
+font-size:16px;
+font-weight:bold;
+cursor:pointer
+}
+
+.primary{
+background:#08734f;
+color:white
+}
+
+.secondary{
+background:#e8b94b;
+color:#173b32
+}
+
+.dark{
+background:#173b32;
+color:white
+}
+
+.features{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:10px
+}
+
+.feature{
+background:#f0f7f4;
+padding:15px;
+border-radius:15px;
+text-align:center
+}
+
+.feature b{
+display:block;
+color:#075f43;
+margin-top:5px
+}
+
+input,select,textarea{
+width:100%;
+padding:13px;
+margin:6px 0;
+border:1px solid #ddd;
+border-radius:11px;
+font-family:tahoma;
+font-size:15px
+}
+
+label{
+font-size:14px;
+font-weight:bold;
+display:block;
+margin-top:8px
+}
+
+.hidden{
+display:none
+}
+
+.status{
+background:#fff8df;
+border-right:5px solid #e8b94b;
+padding:15px;
+border-radius:12px
+}
+
+.steps{
+display:flex;
+flex-direction:column;
+gap:10px
+}
+
+.step{
+padding:12px;
+background:#f4f7f6;
+border-radius:12px
+}
+
+.notice{
+background:#eef8f4;
+padding:14px;
+border-radius:13px;
+font-size:14px
+}
+
+.success{
+background:#e8f7ef;
+color:#17633f;
+padding:15px;
+border-radius:12px;
+display:none;
+margin-top:10px
+}
+
+footer{
+text-align:center;
+padding:25px;
+color:#777;
+font-size:13px
+}
+
+@media(max-width:500px){
+.logo{font-size:32px}
+.hero h1{font-size:23px}
+.features{grid-template-columns:1fr 1fr}
+}
 </style>
 </head>
 
@@ -29,75 +186,311 @@ footer{text-align:center;padding:25px;color:#777}
 
 <header>
 <div class="logo">بازارپل</div>
-<p>بازار عمده‌فروشی مطمئن</p>
+<p>پل امن بین خریداران عمده و تأمین‌کنندگان</p>
 </header>
 
 <main>
 
-<section class="hero">
-<h2>خرید عمده، ساده و مطمئن</h2>
-<p>بازارپل واسطه امن بین خریداران عمده و تأمین‌کنندگان است.</p>
-<button class="buy" onclick="showForm('buyer')">ثبت درخواست خرید</button>
-<button class="seller" onclick="showForm('seller')">ثبت تأمین‌کننده</button>
+<section class="card hero">
+<h1>خرید عمده، ساده و مطمئن</h1>
+
+<p>
+بازارپل درخواست خرید شما را دریافت می‌کند،
+تأمین‌کننده مناسب را پیدا می‌کند و روند معامله را پیگیری می‌کند.
+</p>
+
+<button class="primary" onclick="showSection('buyer')">
+🛒 ثبت درخواست خرید عمده
+</button>
+
+<button class="secondary" onclick="showSection('seller')">
+🏪 ثبت اطلاعات تأمین‌کننده
+</button>
+
+<button class="dark" onclick="showSection('tracking')">
+📦 پیگیری سفارش
+</button>
 </section>
 
-<section class="box">
+
+<section class="card">
+
 <h2>چرا بازارپل؟</h2>
+
 <div class="features">
-<div class="feature">🔒<br>واسطه امن</div>
-<div class="feature">🤝<br>اعتمادسازی</div>
-<div class="feature">📦<br>خرید عمده</div>
-<div class="feature">🚚<br>پیگیری سفارش</div>
+
+<div class="feature">
+🔒
+<b>واسطه امن</b>
+خریدار و فروشنده مستقیماً به هم متصل نمی‌شوند.
+</div>
+
+<div class="feature">
+🤝
+<b>اعتمادسازی</b>
+اطلاعات و درخواست‌ها قبل از معرفی بررسی می‌شوند.
+</div>
+
+<div class="feature">
+📦
+<b>خرید عمده</b>
+تمرکز بازارپل روی معاملات عمده است.
+</div>
+
+<div class="feature">
+🚚
+<b>پیگیری سفارش</b>
+روند درخواست تا سفارش قابل پیگیری است.
+</div>
+
 </div>
 </section>
 
-<section id="formBox" class="box hidden">
-<h2 id="formTitle">ثبت درخواست</h2>
 
-<input id="name" placeholder="نام و نام خانوادگی">
-<input id="phone" placeholder="شماره تماس">
-<input id="product" placeholder="نام کالا">
-<input id="city" placeholder="شهر">
-<input id="amount" placeholder="مقدار مورد نیاز">
-<textarea id="note" rows="4" placeholder="توضیحات و مشخصات کالا"></textarea>
+<section id="buyer" class="card hidden">
 
-<button class="buy" onclick="submitForm()">ثبت اطلاعات</button>
+<h2>🛒 ثبت درخواست خرید عمده</h2>
+
+<div class="notice">
+مشخصات درخواستت را وارد کن تا بازارپل بتواند تأمین‌کننده مناسب را بررسی کند.
+</div>
+
+<label>نام و نام خانوادگی</label>
+<input id="buyerName" placeholder="مثلاً: علی رضایی">
+
+<label>شماره تماس</label>
+<input id="buyerPhone" type="tel" placeholder="مثلاً: 0912xxxxxxx">
+
+<label>نام کالا</label>
+<input id="buyerProduct" placeholder="مثلاً: لوازم خانگی">
+
+<label>شهر خریدار</label>
+<input id="buyerCity" placeholder="مثلاً: تهران">
+
+<label>مقدار مورد نیاز</label>
+<input id="buyerAmount" placeholder="مثلاً: 100 عدد">
+
+<label>توضیحات</label>
+<textarea id="buyerNote" rows="4"
+placeholder="مدل، برند، کیفیت یا مشخصات موردنظر"></textarea>
+
+<button class="primary" onclick="submitBuyer()">
+ثبت درخواست خرید
+</button>
+
+<div id="buyerSuccess" class="success">
+✅ درخواست شما ثبت شد. بازارپل درخواست را بررسی می‌کند.
+</div>
+
 </section>
 
-<section class="box">
-<h2>مسیر بازارپل</h2>
-<p>خریدار → بازارپل → بررسی درخواست → تأمین‌کننده → اعلام قیمت → پیگیری سفارش</p>
+
+<section id="seller" class="card hidden">
+
+<h2>🏪 ثبت اطلاعات تأمین‌کننده</h2>
+
+<div class="notice">
+اطلاعات تأمین‌کننده برای بررسی و همکاری با بازارپل دریافت می‌شود.
+</div>
+
+<label>نام و نام خانوادگی</label>
+<input id="sellerName" placeholder="نام مسئول">
+
+<label>شماره تماس</label>
+<input id="sellerPhone" type="tel" placeholder="شماره تماس">
+
+<label>نام کالا یا گروه کالا</label>
+<input id="sellerProduct" placeholder="مثلاً: لوازم خانگی">
+
+<label>شهر تأمین</label>
+<input id="sellerCity" placeholder="مثلاً: گناوه">
+
+<label>حداقل مقدار فروش عمده</label>
+<input id="sellerAmount" placeholder="مثلاً: 20 عدد">
+
+<label>توضیحات</label>
+<textarea id="sellerNote" rows="4"
+placeholder="توضیحات درباره کالا، قیمت و شرایط همکاری"></textarea>
+
+<button class="secondary" onclick="submitSeller()">
+ثبت اطلاعات تأمین‌کننده
+</button>
+
+<div id="sellerSuccess" class="success">
+✅ اطلاعات شما ثبت شد و برای بررسی بازارپل ارسال گردید.
+</div>
+
+</section>
+
+
+<section id="tracking" class="card hidden">
+
+<h2>📦 پیگیری سفارش</h2>
+
+<input id="trackingCode"
+placeholder="کد پیگیری را وارد کنید">
+
+<button class="dark" onclick="trackOrder()">
+بررسی وضعیت
+</button>
+
+<div id="trackingResult" class="status hidden">
+وضعیت سفارش شما پس از اتصال سامانه مدیریت سفارش‌ها نمایش داده خواهد شد.
+</div>
+
+</section>
+
+
+<section class="card">
+
+<h2>🔐 مسیر امن بازارپل</h2>
+
+<div class="steps">
+
+<div class="step">
+<b>۱. درخواست خرید</b><br>
+خریدار نیاز خود را در بازارپل ثبت می‌کند.
+</div>
+
+<div class="step">
+<b>۲. بررسی درخواست</b><br>
+بازارپل مشخصات و نیاز خریدار را بررسی می‌کند.
+</div>
+
+<div class="step">
+<b>۳. پیدا کردن تأمین‌کننده</b><br>
+تأمین‌کننده مناسب برای درخواست بررسی می‌شود.
+</div>
+
+<div class="step">
+<b>۴. پیشنهاد قیمت</b><br>
+قیمت و شرایط تأمین بررسی و به خریدار اعلام می‌شود.
+</div>
+
+<div class="step">
+<b>۵. سفارش و پیگیری</b><br>
+روند سفارش از طریق بازارپل پیگیری می‌شود.
+</div>
+
+</div>
+
+</section>
+
+
+<section class="card">
+
+<h2>📍 بازارهای تأمین</h2>
+
+<p>
+بازارپل می‌تواند تأمین‌کنندگان شهرهای مختلف را به خریداران عمده متصل کند.
+</p>
+
+<div class="features">
+
+<div class="feature">گناوه</div>
+<div class="feature">بانه</div>
+<div class="feature">مریوان</div>
+<div class="feature">سایر شهرها</div>
+
+</div>
+
+</section>
+
+
+<section class="card">
+
+<h2>💚 اعتماد، اولویت بازارپل</h2>
+
+<p>
+در مدل بازارپل هدف این است که ارتباط مستقیم خریدار و تأمین‌کننده کنترل شود
+و فرآیند معامله از مسیر بازارپل پیگیری شود.
+</p>
+
+<div class="notice">
+بازارپل فعلاً اطلاعات درخواست‌ها را دریافت می‌کند.
+اتصال درگاه پرداخت، پنل مدیریت، سیستم پیشنهاد قیمت و پیگیری واقعی سفارش
+در مراحل بعدی به سامانه اضافه می‌شود.
+</div>
+
 </section>
 
 </main>
 
+
 <footer>
-بازارپل؛ پل مطمئن بین خریدار و تأمین‌کننده
+بازارپل © 2026
+<br>
+پل مطمئن بین خریدار و تأمین‌کننده
 </footer>
 
+
 <script>
-let type="buyer";
 
-function showForm(t){
-type=t;
-document.getElementById("formBox").classList.remove("hidden");
-document.getElementById("formTitle").innerText=
-t==="buyer"?"ثبت درخواست خرید":"ثبت اطلاعات تأمین‌کننده";
-document.getElementById("formBox").scrollIntoView({behavior:"smooth"});
+function showSection(id){
+
+document.getElementById(id).classList.remove("hidden");
+
+document.getElementById(id).scrollIntoView({
+behavior:"smooth"
+});
+
 }
 
-function submitForm(){
-let name=document.getElementById("name").value.trim();
-let phone=document.getElementById("phone").value.trim();
-let product=document.getElementById("product").value.trim();
 
-if(!name||!phone||!product){
+function submitBuyer(){
+
+let name=document.getElementById("buyerName").value.trim();
+let phone=document.getElementById("buyerPhone").value.trim();
+let product=document.getElementById("buyerProduct").value.trim();
+
+if(!name || !phone || !product){
+
 alert("لطفاً نام، شماره تماس و نام کالا را وارد کنید.");
+
 return;
+
 }
 
-alert("درخواست شما با موفقیت ثبت شد. بازارپل به‌زودی آن را بررسی می‌کند.");
+document.getElementById("buyerSuccess").style.display="block";
+
 }
+
+
+function submitSeller(){
+
+let name=document.getElementById("sellerName").value.trim();
+let phone=document.getElementById("sellerPhone").value.trim();
+let product=document.getElementById("sellerProduct").value.trim();
+
+if(!name || !phone || !product){
+
+alert("لطفاً نام، شماره تماس و نام کالا را وارد کنید.");
+
+return;
+
+}
+
+document.getElementById("sellerSuccess").style.display="block";
+
+}
+
+
+function trackOrder(){
+
+let code=document.getElementById("trackingCode").value.trim();
+
+if(!code){
+
+alert("لطفاً کد پیگیری را وارد کنید.");
+
+return;
+
+}
+
+document.getElementById("trackingResult").classList.remove("hidden");
+
+}
+
 </script>
 
 </body>
