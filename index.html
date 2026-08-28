@@ -1,5 +1,3 @@
-حتماً عزیزم. فقط همین یک خط اضافه شده و هیچ چیز دیگه‌ای دست نخورده. این نسخه کامل رو جایگزین index.html کن:
-نوشتن
 <!doctype html>
 <html lang="fa" dir="rtl">
 <head>
@@ -18,15 +16,10 @@ main{max-width:850px;margin:auto;padding:15px}
 .card{background:white;border-radius:20px;padding:20px;margin:15px 0;box-shadow:0 5px 20px #0001}
 .hero{text-align:center}
 h1{color:#075f43;font-size:25px}
-button{width:100%;padding:14px;margin:7px 0;border:0;border-radius:12px;font-size:16px;font-weight:bold}
+button{width:100%;padding:14px;margin:7px 0;border:0;border-radius:12px;font-size:16px;font-weight:bold;cursor:pointer}
 .primary{background:#08734f;color:white}
 .secondary{background:#e8b94b;color:#173b32}
 .dark{background:#173b32;color:white}
-input,textarea{width:100%;padding:13px;margin:5px 0 10px;border:1px solid #ddd;border-radius:10px;font-family:tahoma}
-label{font-weight:bold;font-size:14px}
-.hidden{display:none}
-.notice{background:#eef8f4;padding:12px;border-radius:10px}
-.success{display:none;background:#e7f7ed;color:#17633f;padding:13px;border-radius:10px;margin-top:10px}
 .feature{background:#f0f7f4;padding:13px;border-radius:12px;text-align:center;margin:7px 0}
 footer{text-align:center;color:#777;padding:25px;font-size:13px}
 </style>
@@ -45,9 +38,18 @@ footer{text-align:center;color:#777;padding:25px;font-size:13px}
 <h1>خرید عمده، ساده و مطمئن</h1>
 <p>نیاز خرید خود را ثبت کنید؛ بازارپل درخواست شما را بررسی و پیگیری می‌کند.</p>
 
-<button class="primary" onclick="show('buyer')">🛒 ثبت درخواست خرید عمده</button>
-<button class="secondary" onclick="show('seller')">🏪 ثبت اطلاعات تأمین‌کننده</button>
-<button class="dark" onclick="show('tracking')">📦 پیگیری درخواست</button>
+<button class="primary"
+onclick="window.location.href='https://docs.google.com/forms/d/e/1FAIpQLSfcJ7aexpq3EK0NBRxxPmI1r298iZQtOtdxnavxFcofptcdDQ/viewform?usp=dialog'">
+🛒 ثبت درخواست خرید عمده
+</button>
+
+<button class="secondary" onclick="showSeller()">
+🏪 ثبت اطلاعات تأمین‌کننده
+</button>
+
+<button class="dark" onclick="showTracking()">
+📦 پیگیری درخواست
+</button>
 </section>
 
 <section class="card">
@@ -58,62 +60,23 @@ footer{text-align:center;color:#777;padding:25px;font-size:13px}
 <div class="feature">🚚 پیگیری درخواست‌ها</div>
 </section>
 
-<section id="buyer" class="card hidden">
-<h2>🛒 ثبت درخواست خرید</h2>
-<div class="notice">اطلاعات را وارد کنید تا درخواست شما ثبت شود.</div>
+<section id="seller" class="card" style="display:none">
+<h2>🏪 ثبت اطلاعات تأمین‌کننده</h2>
 
-<label>نام و نام خانوادگی</label>
-<input id="buyerName" placeholder="نام و نام خانوادگی">
+<p>برای ثبت تأمین‌کننده، اطلاعات خود را برای بازارپل ارسال کنید.</p>
 
-<label>شماره تماس</label>
-<input id="buyerPhone" type="tel" placeholder="0912xxxxxxx">
-
-<label>نام کالا</label>
-<input id="buyerProduct" placeholder="مثلاً لوازم خانگی">
-
-<label>شهر خریدار</label>
-<input id="buyerCity" placeholder="مثلاً تهران">
-
-<label>مقدار مورد نیاز</label>
-<input id="buyerAmount" placeholder="مثلاً 100 عدد">
-
-<label>توضیحات</label>
-<textarea id="buyerNote" rows="4" placeholder="برند، مدل، کیفیت و..."></textarea>
-
-<button class="primary" onclick="saveBuyer()">ثبت درخواست خرید</button>
-<div id="buyerSuccess" class="success"></div>
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSfcJ7aexpq3EK0NBRxxPmI1r298iZQtOtdxnavxFcofptcdDQ/viewform?usp=dialog"
+style="text-decoration:none">
+<button class="secondary">ثبت اطلاعات تأمین‌کننده</button>
+</a>
 </section>
 
-<section id="seller" class="card hidden">
-<h2>🏪 ثبت تأمین‌کننده</h2>
-
-<label>نام و نام خانوادگی</label>
-<input id="sellerName" placeholder="نام مسئول">
-
-<label>شماره تماس</label>
-<input id="sellerPhone" type="tel" placeholder="شماره تماس">
-
-<label>نام کالا یا گروه کالا</label>
-<input id="sellerProduct" placeholder="مثلاً لوازم خانگی">
-
-<label>شهر تأمین</label>
-<input id="sellerCity" placeholder="مثلاً گناوه">
-
-<label>حداقل فروش عمده</label>
-<input id="sellerAmount" placeholder="مثلاً 20 عدد">
-
-<label>توضیحات</label>
-<textarea id="sellerNote" rows="4"></textarea>
-
-<button class="secondary" onclick="saveSeller()">ثبت اطلاعات تأمین‌کننده</button>
-<div id="sellerSuccess" class="success"></div>
-</section>
-
-<section id="tracking" class="card hidden">
+<section id="tracking" class="card" style="display:none">
 <h2>📦 پیگیری درخواست</h2>
-<input id="trackingCode" placeholder="کد پیگیری را وارد کنید">
-<button class="dark" onclick="track()">پیگیری</button>
-<div id="trackingResult" class="notice hidden"></div>
+<p>کد پیگیری درخواست خود را نگه دارید و برای پیگیری با بازارپل تماس بگیرید.</p>
+<div class="feature">
+وضعیت درخواست پس از بررسی توسط بازارپل اعلام می‌شود.
+</div>
 </section>
 
 <section class="card">
@@ -141,99 +104,14 @@ footer{text-align:center;color:#777;padding:25px;font-size:13px}
 </footer>
 
 <script>
-function show(id){
-document.getElementById(id).classList.remove("hidden");
-document.getElementById(id).scrollIntoView({behavior:"smooth"});
+function showSeller(){
+document.getElementById("seller").style.display="block";
+document.getElementById("seller").scrollIntoView({behavior:"smooth"});
 }
 
-function code(){
-return "BP-"+Date.now().toString().slice(-8);
-}
-
-function saveBuyer(){
-let name=buyerName.value.trim();
-let phone=buyerPhone.value.trim();
-let product=buyerProduct.value.trim();
-
-if(!name||!phone||!product){
-alert("نام، شماره تماس و نام کالا الزامی است.");
-return;
-}
-
-let c=code();
-
-let data={
-type:"خریدار",
-code:c,
-name:name,
-phone:phone,
-product:product,
-city:buyerCity.value.trim(),
-amount:buyerAmount.value.trim(),
-note:buyerNote.value.trim(),
-date:new Date().toLocaleString("fa-IR")
-};
-
-let list=JSON.parse(localStorage.getItem("bazaarpol_requests")||"[]");
-list.push(data);
-localStorage.setItem("bazaarpol_requests",JSON.stringify(list));
-
-buyerSuccess.innerHTML="✅ درخواست ثبت شد.<br>کد پیگیری شما: <b>"+c+"</b>";
-buyerSuccess.style.display="block";
-}
-
-function saveSeller(){
-let name=sellerName.value.trim();
-let phone=sellerPhone.value.trim();
-let product=sellerProduct.value.trim();
-
-if(!name||!phone||!product){
-alert("نام، شماره تماس و نام کالا الزامی است.");
-return;
-}
-
-let c=code();
-
-let data={
-type:"تأمین‌کننده",
-code:c,
-name:name,
-phone:phone,
-product:product,
-city:sellerCity.value.trim(),
-amount:sellerAmount.value.trim(),
-note:sellerNote.value.trim(),
-date:new Date().toLocaleString("fa-IR")
-};
-
-let list=JSON.parse(localStorage.getItem("bazaarpol_requests")||"[]");
-list.push(data);
-localStorage.setItem("bazaarpol_requests",JSON.stringify(list));
-
-sellerSuccess.innerHTML="✅ اطلاعات ثبت شد.<br>کد پیگیری: <b>"+c+"</b>";
-sellerSuccess.style.display="block";
-}
-
-function track(){
-let c=trackingCode.value.trim();
-if(!c){
-alert("کد پیگیری را وارد کنید.");
-return;
-}
-
-let list=JSON.parse(localStorage.getItem("bazaarpol_requests")||"[]");
-let item=list.find(x=>x.code===c);
-
-trackingResult.classList.remove("hidden");
-
-if(item){
-trackingResult.innerHTML="✅ درخواست شما ثبت شده است.<br>نوع: "+item.type+
-"<br>کالا: "+item.product+
-"<br>تاریخ ثبت: "+item.date+
-"<br><br>وضعیت: <b>در حال بررسی بازارپل</b>";
-}else{
-trackingResult.innerHTML="❌ کد پیگیری پیدا نشد.";
-}
+function showTracking(){
+document.getElementById("tracking").style.display="block";
+document.getElementById("tracking").scrollIntoView({behavior:"smooth"});
 }
 </script>
 
