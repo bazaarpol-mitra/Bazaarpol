@@ -1,5 +1,5 @@
 
- <!doctype html>
+<!doctype html>
 <html lang="fa" dir="rtl">
 <head>
 <meta charset="UTF-8">
@@ -53,11 +53,13 @@ font-weight:bold;
 <div class="box">
 
 <h3>🛒 ثبت درخواست خرید</h3>
+
 <button onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSfcJ7aexpq3EK0NBRxxPmI1r298iZQtOtdxnavxFcofptcdDQ/viewform','_blank')">
 ثبت درخواست خرید
 </button>
 
 <h3>🏪 ثبت تأمین‌کننده</h3>
+
 <button onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSdkkL9kjiIJZCst9okj_0X6ajCOF7r2swPXjb1h5EKrCLgD-Q/viewform','_blank')">
 ثبت تأمین‌کننده
 </button>
@@ -70,7 +72,7 @@ font-weight:bold;
 
 <p>کد پیگیری خود را وارد کنید:</p>
 
-<input id="code" type="text" placeholder="مثلاً BP-1001">
+<input id="code" type="text" placeholder="مثلاً 1001">
 
 <br>
 
@@ -81,20 +83,25 @@ font-weight:bold;
 </div>
 
 <script>
+
 function checkCode(){
 
-let code=document.getElementById("code").value.trim().toUpperCase();
+let code=document.getElementById("code").value.trim();
 let result=document.getElementById("result");
 
-if(code==="BP-1001"){
-result.innerHTML="✅ وضعیت درخواست: ثبت شد";
-}else if(code===""){
+if(code===""){
 result.innerHTML="⚠️ لطفاً کد پیگیری را وارد کنید";
+return;
+}
+
+if(code==="1001"){
+result.innerHTML="✅ وضعیت درخواست: ثبت شد";
 }else{
 result.innerHTML="❌ کد پیگیری پیدا نشد";
 }
 
 }
+
 </script>
 
 </body>
