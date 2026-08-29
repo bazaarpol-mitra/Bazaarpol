@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>بازارپل | خرید عمده مطمئن</title>
+<title>بازارپل | خرید عمده و تأمین‌کننده</title>
+<meta name="description" content="بازارپل پل ارتباطی خریداران عمده و تأمین‌کنندگان برای خرید عمده ساده، مطمئن و بدون دردسر.">
 
 <style>
 *{box-sizing:border-box}
@@ -13,55 +14,91 @@ margin:0;
 font-family:tahoma,Arial,sans-serif;
 background:#f4f7f6;
 color:#222;
-text-align:center;
+line-height:1.9;
 }
 
 header{
-background:#08734f;
-color:white;
-padding:30px 15px;
+background:linear-gradient(135deg,#08734f,#0b8b61);
+color:#fff;
+padding:45px 18px;
+text-align:center;
 }
 
 header h1{
-margin:0 0 10px;
-font-size:32px;
+margin:0;
+font-size:36px;
 }
 
 header p{
-margin:0;
-font-size:17px;
+margin:8px 0 0;
+font-size:18px;
 }
 
 .container{
-max-width:600px;
-margin:25px auto;
-padding:0 15px;
+max-width:700px;
+margin:auto;
+padding:18px;
+}
+
+.hero{
+background:#fff;
+margin-top:-20px;
+border-radius:20px;
+padding:28px 20px;
+text-align:center;
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.hero h2{
+margin-top:0;
+color:#08734f;
+font-size:25px;
+}
+
+.hero p{
+color:#555;
 }
 
 .box{
-background:white;
+background:#fff;
 padding:25px 20px;
 margin:20px 0;
-border-radius:16px;
-box-shadow:0 3px 12px rgba(0,0,0,.08);
+border-radius:18px;
+box-shadow:0 3px 15px rgba(0,0,0,.06);
 }
 
-h2{
+.box h2{
 margin-top:0;
-font-size:21px;
+color:#08734f;
+font-size:22px;
+}
+
+.features{
+display:grid;
+gap:12px;
+}
+
+.feature{
+background:#f7faf9;
+padding:14px;
+border-radius:12px;
 }
 
 button{
 display:inline-block;
 padding:14px 24px;
-margin:8px;
+margin:7px;
 border:0;
-border-radius:10px;
+border-radius:11px;
 background:#08734f;
-color:white;
+color:#fff;
 font-family:tahoma;
 font-size:16px;
 cursor:pointer;
+}
+
+button:hover{
+opacity:.92;
 }
 
 input{
@@ -80,13 +117,32 @@ text-align:center;
 #result{
 margin-top:15px;
 font-weight:bold;
-min-height:25px;
+min-height:28px;
+}
+
+.steps{
+text-align:right;
+}
+
+.step{
+padding:12px 0;
+border-bottom:1px solid #eee;
+}
+
+.step:last-child{
+border-bottom:0;
+}
+
+.contact{
+text-align:center;
 }
 
 footer{
+background:#17352b;
+color:#ddd;
+text-align:center;
+padding:25px 15px;
 margin-top:30px;
-padding:20px;
-color:#666;
 font-size:13px;
 }
 </style>
@@ -101,11 +157,44 @@ font-size:13px;
 
 <div class="container">
 
+<div class="hero">
+<h2>پل امن بین خریداران عمده و تأمین‌کنندگان</h2>
+<p>
+خرید عمده، ساده‌تر و مطمئن‌تر؛
+درخواستت را ثبت کن و بازارپل مسیر تأمین را برایت پیگیری می‌کند.
+</p>
+
+<button onclick="goToBuy()">🛒 ثبت درخواست خرید</button>
+<button onclick="goToSupplier()">🏪 ثبت تأمین‌کننده</button>
+</div>
+
+<div class="box">
+<h2>چرا بازارپل؟</h2>
+
+<div class="features">
+<div class="feature">✅ ارتباط بین خریدار عمده و تأمین‌کننده</div>
+<div class="feature">✅ مناسب برای خریدهای عمده</div>
+<div class="feature">✅ امکان پیگیری درخواست با کد</div>
+<div class="feature">✅ ساده و قابل استفاده با موبایل</div>
+</div>
+</div>
+
+<div class="box">
+<h2>🔄 روند کار بازارپل</h2>
+
+<div class="steps">
+<div class="step">1️⃣ درخواست خرید خود را ثبت می‌کنید.</div>
+<div class="step">2️⃣ بازارپل درخواست را بررسی می‌کند.</div>
+<div class="step">3️⃣ تأمین‌کننده مناسب پیدا می‌شود.</div>
+<div class="step">4️⃣ وضعیت درخواست را با کد پیگیری مشاهده می‌کنید.</div>
+</div>
+</div>
+
 <div class="box">
 <h2>🛒 ثبت درخواست خرید</h2>
 <p>برای خرید عمده، درخواست خود را ثبت کنید.</p>
 
-<button onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSfcJ7aexpq3EK0NBRxxPmI1r298iZQtOtdxnavxFcofptcdDQ/viewform','_blank')">
+<button onclick="goToBuy()">
 ثبت درخواست خرید
 </button>
 </div>
@@ -114,7 +203,7 @@ font-size:13px;
 <h2>🏪 ثبت تأمین‌کننده</h2>
 <p>اگر تأمین‌کننده هستید، اطلاعات خود را ثبت کنید.</p>
 
-<button onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSdkkL9kjiIJZCst9okj_0X6ajCOF7r2swPXjb1h5EKrCLgD-Q/viewform','_blank')">
+<button onclick="goToSupplier()">
 ثبت تأمین‌کننده
 </button>
 </div>
@@ -124,11 +213,26 @@ font-size:13px;
 
 <p>کد پیگیری خود را وارد کنید:</p>
 
-<input id="code" type="text" inputmode="numeric" placeholder="مثلاً 1001">
+<input
+id="code"
+type="text"
+inputmode="numeric"
+placeholder="مثلاً 1001"
+>
 
-<button onclick="checkCode()">پیگیری درخواست</button>
+<button onclick="checkCode()">
+پیگیری درخواست
+</button>
 
 <div id="result"></div>
+</div>
+
+<div class="box contact">
+<h2>📞 ارتباط با بازارپل</h2>
+<p>
+برای همکاری، تأمین کالا و درخواست‌های عمده
+از طریق راه‌های ارتباطی بازارپل در تماس باشید.
+</p>
 </div>
 
 </div>
@@ -138,6 +242,20 @@ font-size:13px;
 </footer>
 
 <script>
+
+function goToBuy(){
+window.open(
+'https://docs.google.com/forms/d/e/1FAIpQLSfcJ7aexpq3EK0NBRxxPmI1r298iZQtOtdxnavxFcofptcdDQ/viewform',
+'_blank'
+);
+}
+
+function goToSupplier(){
+window.open(
+'https://docs.google.com/forms/d/e/1FAIpQLSdkkL9kjiIJZCst9okj_0X6ajCOf7r2swPXjb1h5EKrCLgD-Q/viewform',
+'_blank'
+);
+}
 
 async function checkCode(){
 
