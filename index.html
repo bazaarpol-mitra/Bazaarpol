@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="fa" dir="rtl">
 <head>
@@ -65,10 +64,6 @@ font-size:16px;
 cursor:pointer;
 }
 
-button:hover{
-opacity:.9;
-}
-
 input{
 display:block;
 width:90%;
@@ -129,16 +124,9 @@ font-size:13px;
 
 <p>کد پیگیری خود را وارد کنید:</p>
 
-<input
-id="code"
-type="text"
-inputmode="numeric"
-placeholder="مثلاً 1001"
->
+<input id="code" type="text" inputmode="numeric" placeholder="مثلاً 1001">
 
-<button onclick="checkCode()">
-پیگیری درخواست
-</button>
+<button onclick="checkCode()">پیگیری درخواست</button>
 
 <div id="result"></div>
 </div>
@@ -151,35 +139,38 @@ placeholder="مثلاً 1001"
 
 <script>
 
-const trackingData = {
-"1001":"ثبت شد",
-"1002":"ثبت شد",
-"1003":"ثبت شد",
-"1004":"ثبت شد"
-};
+async function checkCode(){
 
-function checkCode(){
-
-const code =
-document.getElementById("code")
-.value
-.trim();
-
-const result =
-document.getElementById("result");
+const code=document.getElementById("code").value.trim();
+const result=document.getElementById("result");
 
 if(code===""){
 result.innerHTML="⚠️ لطفاً کد پیگیری را وارد کنید";
 return;
 }
 
+result.innerHTML="⏳ در حال بررسی...";
+
+try{
+
+const response=await fetch("tracking.json?x="+Date.now());
+
+if(!response.ok){
+throw new Error("خطا");
+}
+
+const trackingData=await response.json();
+
 if(trackingData[code]){
-result.innerHTML=
-"✅ وضعیت درخواست: "
-+ trackingData[code];
+result.innerHTML="✅ وضعیت درخواست: "+trackingData[code];
 }else{
-result.innerHTML=
-"❌ کد پیگیری پیدا نشد";
+result.innerHTML="❌ کد پیگیری پیدا نشد";
+}
+
+}catch(error){
+
+result.innerHTML="⚠️ خطا در دریافت اطلاعات پیگیری";
+
 }
 
 }
