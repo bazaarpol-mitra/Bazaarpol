@@ -84,20 +84,24 @@ font-weight:bold;
 
 <script>
 
+const trackingData = {
+"1001": "ثبت شد"
+};
+
 function checkCode(){
 
-let code=document.getElementById("code").value.trim();
-let result=document.getElementById("result");
+let code = document.getElementById("code").value.trim();
+let result = document.getElementById("result");
 
-if(code===""){
-result.innerHTML="⚠️ لطفاً کد پیگیری را وارد کنید";
+if(code === ""){
+result.innerHTML = "⚠️ لطفاً کد پیگیری را وارد کنید";
 return;
 }
 
-if(code==="1001"){
-result.innerHTML="✅ وضعیت درخواست: ثبت شد";
+if(trackingData[code]){
+result.innerHTML = "✅ وضعیت درخواست: " + trackingData[code];
 }else{
-result.innerHTML="❌ کد پیگیری پیدا نشد";
+result.innerHTML = "❌ کد پیگیری پیدا نشد";
 }
 
 }
