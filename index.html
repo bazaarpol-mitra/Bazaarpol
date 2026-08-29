@@ -4,11 +4,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>بازارپل | خرید عمده و تأمین‌کننده</title>
-<meta name="description" content="بازارپل پل ارتباطی خریداران عمده و تأمین‌کنندگان برای خرید عمده ساده و مطمئن.">
+
+<title>بازارپل | تأمین عمده انواع کالا در سراسر ایران</title>
+
+<meta name="description" content="بازارپل؛ تأمین عمده انواع کالا در سراسر ایران. درخواست خرید عمده خود را ثبت کنید و کالای موردنیاز خود را سفارش دهید.">
 
 <style>
-*{box-sizing:border-box}
+*{
+box-sizing:border-box;
+}
 
 body{
 margin:0;
@@ -20,7 +24,7 @@ line-height:1.9;
 
 header{
 background:linear-gradient(135deg,#08734f,#0b8b61);
-color:#fff;
+color:white;
 padding:45px 18px;
 text-align:center;
 }
@@ -36,16 +40,16 @@ font-size:18px;
 }
 
 .container{
-max-width:700px;
+max-width:720px;
 margin:auto;
 padding:18px;
 }
 
 .hero{
-background:#fff;
+background:white;
 margin-top:-20px;
 border-radius:20px;
-padding:28px 20px;
+padding:30px 20px;
 text-align:center;
 box-shadow:0 5px 20px rgba(0,0,0,.08);
 }
@@ -61,7 +65,7 @@ color:#555;
 }
 
 .box{
-background:#fff;
+background:white;
 padding:25px 20px;
 margin:20px 0;
 border-radius:18px;
@@ -74,15 +78,24 @@ color:#08734f;
 font-size:22px;
 }
 
-.features{
+.categories{
 display:grid;
+grid-template-columns:1fr 1fr;
 gap:12px;
 }
 
-.feature{
+.category{
 background:#f7faf9;
-padding:14px;
-border-radius:12px;
+padding:16px 8px;
+border-radius:13px;
+font-weight:bold;
+text-align:center;
+}
+
+.category span{
+display:block;
+font-size:28px;
+margin-bottom:5px;
 }
 
 button{
@@ -92,7 +105,7 @@ margin:7px;
 border:0;
 border-radius:11px;
 background:#08734f;
-color:#fff;
+color:white;
 font-family:tahoma;
 font-size:16px;
 cursor:pointer;
@@ -119,6 +132,17 @@ text-align:center;
 margin-top:15px;
 font-weight:bold;
 min-height:28px;
+}
+
+.features{
+display:grid;
+gap:12px;
+}
+
+.feature{
+background:#f7faf9;
+padding:14px;
+border-radius:12px;
 }
 
 .steps{
@@ -160,6 +184,13 @@ direction:ltr;
 margin:10px 0 18px;
 }
 
+.note{
+background:#eef8f4;
+padding:15px;
+border-radius:12px;
+margin-top:15px;
+}
+
 footer{
 background:#17352b;
 color:#ddd;
@@ -175,84 +206,212 @@ font-size:13px;
 
 <header>
 <h1>بازارپل</h1>
-<p>بازار عمده‌فروشی مطمئن</p>
+<p>تأمین عمده انواع کالا در سراسر ایران 🇮🇷</p>
 </header>
 
 <div class="container">
 
 <div class="hero">
-<h2>پل امن بین خریداران عمده و تأمین‌کنندگان</h2>
+
+<h2>تأمین عمده انواع کالا در سراسر ایران 🇮🇷</h2>
 
 <p>
-خرید عمده، ساده‌تر و مطمئن‌تر؛
-درخواست خود را ثبت کنید و بازارپل مسیر تأمین را پیگیری می‌کند.
+بازارپل برای خریداران عمده در سراسر کشور،
+امکان ثبت درخواست تأمین کالا را فراهم می‌کند.
 </p>
 
-<button onclick="goToBuy()">🛒 ثبت درخواست خرید</button>
-<button onclick="goToSupplier()">🏪 ثبت تأمین‌کننده</button>
+<p>
+کالای موردنظر در دسته‌بندی‌ها نبود؟
+<strong>درخواست خرید خودت را ثبت کن.</strong>
+</p>
+
+<button onclick="goToBuy()">
+🛒 ثبت درخواست خرید
+</button>
+
+<button onclick="goToSupplier()">
+🏪 ثبت تأمین‌کننده
+</button>
+
 </div>
 
-<div class="box about">
-<h2>ℹ️ درباره بازارپل</h2>
-
-<p>
-بازارپل یک پل ارتباطی بین خریداران عمده و تأمین‌کنندگان است.
-خریدار درخواست خود را ثبت می‌کند و بازارپل برای پیدا کردن تأمین‌کننده مناسب و پیگیری درخواست کمک می‌کند.
-</p>
-
-<p>
-بازارپل برای خریداران عمده، فروشگاه‌ها، کسب‌وکارها و تأمین‌کنندگان کالا طراحی شده است.
-</p>
-
-<p>
-هدف ما ساده‌تر کردن خرید عمده، پیدا کردن تأمین‌کننده مناسب و ایجاد یک مسیر روشن برای پیگیری درخواست‌هاست.
-</p>
-</div>
 
 <div class="box">
-<h2>چرا بازارپل؟</h2>
 
-<div class="features">
-<div class="feature">✅ ارتباط بین خریداران عمده و تأمین‌کنندگان</div>
-<div class="feature">✅ مناسب برای خریدهای عمده</div>
-<div class="feature">✅ پیگیری درخواست با کد پیگیری</div>
-<div class="feature">✅ ساده و قابل استفاده با موبایل</div>
-</div>
-</div>
+<h2>🛍️ دسته‌بندی کالاها</h2>
 
-<div class="box">
-<h2>🔄 روند کار بازارپل</h2>
+<div class="categories">
 
-<div class="steps">
-<div class="step">1️⃣ درخواست خرید خود را ثبت می‌کنید.</div>
-<div class="step">2️⃣ بازارپل درخواست را بررسی می‌کند.</div>
-<div class="step">3️⃣ تأمین‌کننده مناسب پیدا می‌شود.</div>
-<div class="step">4️⃣ وضعیت درخواست را با کد پیگیری مشاهده می‌کنید.</div>
-</div>
+<div class="category">
+<span>🧴</span>
+آرایشی و بهداشتی
 </div>
 
-<div class="box">
-<h2>🛒 ثبت درخواست خرید</h2>
-<p>برای خرید عمده، درخواست خود را ثبت کنید.</p>
+<div class="category">
+<span>👕</span>
+پوشاک، کیف و کفش
+</div>
+
+<div class="category">
+<span>🏠</span>
+لوازم خانه و آشپزخانه
+</div>
+
+<div class="category">
+<span>📱</span>
+موبایل و لوازم جانبی
+</div>
+
+<div class="category">
+<span>🔌</span>
+لوازم برقی و دیجیتال
+</div>
+
+<div class="category">
+<span>🍽️</span>
+مواد غذایی و کالاهای مصرفی
+</div>
+
+<div class="category">
+<span>🧰</span>
+ابزار و تجهیزات
+</div>
+
+<div class="category">
+<span>📦</span>
+سایر کالاها
+</div>
+
+</div>
+
+<div class="note">
+کالای موردنظر شما در دسته‌بندی‌ها نیست؟
+<br>
+<strong>درخواست خرید خود را ثبت کنید.</strong>
+<br>
 
 <button onclick="goToBuy()">
 ثبت درخواست خرید
 </button>
 </div>
 
+</div>
+
+
+<div class="box about">
+
+<h2>ℹ️ درباره بازارپل</h2>
+
+<p>
+بازارپل یک مجموعه تأمین و فروش عمده است که برای خریداران در سراسر ایران فعالیت می‌کند.
+</p>
+
+<p>
+هدف بازارپل، فراهم کردن مسیر ساده برای تأمین انواع کالا به صورت عمده است.
+</p>
+
+<p>
+خریداران می‌توانند کالای موردنیاز خود را درخواست کنند و وضعیت درخواست را با کد پیگیری مشاهده کنند.
+</p>
+
+</div>
+
+
 <div class="box">
+
+<h2>⭐ چرا بازارپل؟</h2>
+
+<div class="features">
+
+<div class="feature">
+🇮🇷 فعالیت برای خریداران سراسر ایران
+</div>
+
+<div class="feature">
+📦 تأمین انواع کالا به صورت عمده
+</div>
+
+<div class="feature">
+🛒 ثبت آسان درخواست خرید
+</div>
+
+<div class="feature">
+📦 امکان پیگیری درخواست با کد
+</div>
+
+<div class="feature">
+📱 طراحی مناسب برای استفاده با موبایل
+</div>
+
+</div>
+
+</div>
+
+
+<div class="box">
+
+<h2>🔄 روند خرید از بازارپل</h2>
+
+<div class="steps">
+
+<div class="step">
+1️⃣ کالای موردنیاز خود را مشخص می‌کنید.
+</div>
+
+<div class="step">
+2️⃣ درخواست خرید عمده را ثبت می‌کنید.
+</div>
+
+<div class="step">
+3️⃣ درخواست شما بررسی و تأمین می‌شود.
+</div>
+
+<div class="step">
+4️⃣ وضعیت درخواست را با کد پیگیری مشاهده می‌کنید.
+</div>
+
+</div>
+
+</div>
+
+
+<div class="box">
+
+<h2>🛒 ثبت درخواست خرید</h2>
+
+<p>
+برای خرید عمده هر نوع کالا، درخواست خود را ثبت کنید.
+</p>
+
+<button onclick="goToBuy()">
+ثبت درخواست خرید
+</button>
+
+</div>
+
+
+<div class="box">
+
 <h2>🏪 ثبت تأمین‌کننده</h2>
-<p>اگر تأمین‌کننده هستید، اطلاعات خود را ثبت کنید.</p>
+
+<p>
+اگر تأمین‌کننده کالا هستید، اطلاعات خود را برای همکاری ثبت کنید.
+</p>
 
 <button onclick="goToSupplier()">
 ثبت تأمین‌کننده
 </button>
+
 </div>
 
+
 <div class="box">
+
 <h2>📦 پیگیری درخواست</h2>
 
-<p>کد پیگیری خود را وارد کنید:</p>
+<p>
+کد پیگیری خود را وارد کنید:
+</p>
 
 <input
 id="code"
@@ -266,12 +425,17 @@ placeholder="مثلاً 1001"
 </button>
 
 <div id="result"></div>
+
 </div>
 
+
 <div class="box contact">
+
 <h2>📞 ارتباط با بازارپل</h2>
 
-<div class="phone">09359677065</div>
+<div class="phone">
+09359677065
+</div>
 
 <a href="tel:09359677065">
 📞 تماس مستقیم
@@ -280,61 +444,96 @@ placeholder="مثلاً 1001"
 <a href="https://wa.me/989359677065" target="_blank">
 💬 واتساپ
 </a>
+
 </div>
 
 </div>
+
 
 <footer>
-بازارپل؛ پل ارتباطی خریداران عمده و تأمین‌کنندگان
+بازارپل؛ تأمین عمده انواع کالا در سراسر ایران 🇮🇷
+<br>
+© بازارپل
 </footer>
+
 
 <script>
 
 function goToBuy(){
+
 window.open(
 'https://docs.google.com/forms/d/e/1FAIpQLSfcJ7aexpq3EK0NBRxxPmI1r298iZQtOtdxnavxFcofptcdDQ/viewform',
 '_blank'
 );
+
 }
 
+
 function goToSupplier(){
+
 window.open(
 'https://docs.google.com/forms/d/e/1FAIpQLSdkkL9kjiIJZCst9okj_0X6ajCOF7r2swPXjb1h5EKrCLgD-Q/viewform',
 '_blank'
 );
+
 }
+
 
 async function checkCode(){
 
-const code=document.getElementById("code").value.trim();
-const result=document.getElementById("result");
+const code=
+document.getElementById("code")
+.value
+.trim();
+
+const result=
+document.getElementById("result");
 
 if(code===""){
-result.innerHTML="⚠️ لطفاً کد پیگیری را وارد کنید";
+
+result.innerHTML=
+"⚠️ لطفاً کد پیگیری را وارد کنید";
+
 return;
+
 }
 
-result.innerHTML="⏳ در حال بررسی...";
+result.innerHTML=
+"⏳ در حال بررسی...";
 
 try{
 
-const response=await fetch("tracking.json?x="+Date.now());
+const response=
+await fetch(
+"tracking.json?x="+Date.now()
+);
 
 if(!response.ok){
+
 throw new Error("خطا");
+
 }
 
-const trackingData=await response.json();
+const trackingData=
+await response.json();
 
 if(trackingData[code]){
-result.innerHTML="✅ وضعیت درخواست: "+trackingData[code];
+
+result.innerHTML=
+"✅ وضعیت درخواست: "
++trackingData[code];
+
 }else{
-result.innerHTML="❌ کد پیگیری پیدا نشد";
+
+result.innerHTML=
+"❌ کد پیگیری پیدا نشد";
+
 }
 
 }catch(error){
 
-result.innerHTML="⚠️ خطا در دریافت اطلاعات پیگیری";
+result.innerHTML=
+"⚠️ خطا در دریافت اطلاعات پیگیری";
 
 }
 
