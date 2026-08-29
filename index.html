@@ -1,17 +1,101 @@
 
-پرش به محتوا
-Bazaarpol
-ناوبری مخزن
-کد
-مسائل
-درخواست‌های pull
-بازارپل/ <!doctype html> <html lang="fa" dir="rtl"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width,initial-scale=1"> <title>بازارپل</ title> <style> body{font-family:tahoma;text-align:center;background:#f4f7f6;padding:30px} h1{color:#08734f} button{padding:15px 25px;margin:10px;border:0;border-radius:10px} </ سبک> </ head> <body> <h1>بازارپل</ h1> <h2>بازار عمده‌فروشی مطمئن<
-/h2> <p>خرید عمده، مستقیم و مطمئن با بازارپل</
-بازارپل میترا
-بازارپل میترا
-۴ روز پیش
-نام	تاریخ آخرین کامیت
-..
-p> <button>ثبت درخواست خرید</ button> <button>ثبت </> دستگاه کننده</ button> body> <
-۴ روز پیش
- 
+ <!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>بازارپل</title>
+
+<style>
+body{
+font-family:tahoma;
+text-align:center;
+background:#f4f7f6;
+padding:30px;
+}
+h1{color:#08734f;}
+button{
+padding:15px 25px;
+margin:10px;
+border:0;
+border-radius:10px;
+cursor:pointer;
+}
+input{
+padding:14px;
+margin:10px;
+border-radius:8px;
+border:1px solid #ccc;
+width:80%;
+max-width:350px;
+}
+.box{
+background:white;
+padding:20px;
+margin:25px auto;
+border-radius:15px;
+max-width:500px;
+}
+#result{
+margin-top:15px;
+font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<h1>بازارپل</h1>
+<h2>بازار عمده‌فروشی مطمئن</h2>
+
+<p>خرید عمده، مستقیم و مطمئن با بازارپل</p>
+
+<div class="box">
+
+<h3>🛒 ثبت درخواست خرید</h3>
+<button onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSfcJ7aexpq3EK0NBRxxPmI1r298iZQtOtdxnavxFcofptcdDQ/viewform','_blank')">
+ثبت درخواست خرید
+</button>
+
+<h3>🏪 ثبت تأمین‌کننده</h3>
+<button onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSdkkL9kjiIJZCst9okj_0X6ajCOF7r2swPXjb1h5EKrCLgD-Q/viewform','_blank')">
+ثبت تأمین‌کننده
+</button>
+
+</div>
+
+<div class="box">
+
+<h3>📦 پیگیری درخواست</h3>
+
+<p>کد پیگیری خود را وارد کنید:</p>
+
+<input id="code" type="text" placeholder="مثلاً BP-1001">
+
+<br>
+
+<button onclick="checkCode()">پیگیری درخواست</button>
+
+<div id="result"></div>
+
+</div>
+
+<script>
+function checkCode(){
+
+let code=document.getElementById("code").value.trim().toUpperCase();
+let result=document.getElementById("result");
+
+if(code==="BP-1001"){
+result.innerHTML="✅ وضعیت درخواست: ثبت شد";
+}else if(code===""){
+result.innerHTML="⚠️ لطفاً کد پیگیری را وارد کنید";
+}else{
+result.innerHTML="❌ کد پیگیری پیدا نشد";
+}
+
+}
+</script>
+
+</body>
+</html>
