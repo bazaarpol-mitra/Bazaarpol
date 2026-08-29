@@ -7,12 +7,10 @@
 
 <title>بازارپل | تأمین عمده انواع کالا در سراسر ایران</title>
 
-<meta name="description" content="بازارپل؛ تأمین عمده انواع کالا در سراسر ایران. درخواست خرید عمده خود را ثبت کنید و کالای موردنیاز خود را سفارش دهید.">
+<meta name="description" content="بازارپل؛ تأمین عمده انواع کالا در سراسر ایران. درخواست خرید عمده خود را ثبت کنید.">
 
 <style>
-*{
-box-sizing:border-box;
-}
+*{box-sizing:border-box}
 
 body{
 margin:0;
@@ -85,17 +83,27 @@ gap:12px;
 }
 
 .category{
+border:0;
 background:#f7faf9;
 padding:16px 8px;
 border-radius:13px;
 font-weight:bold;
 text-align:center;
+color:#222;
+font-family:tahoma;
+font-size:15px;
+width:100%;
+margin:0;
 }
 
 .category span{
 display:block;
 font-size:28px;
 margin-bottom:5px;
+}
+
+.category:hover{
+background:#e8f5ef;
 }
 
 button{
@@ -109,10 +117,6 @@ color:white;
 font-family:tahoma;
 font-size:16px;
 cursor:pointer;
-}
-
-button:hover{
-opacity:.92;
 }
 
 input{
@@ -212,7 +216,6 @@ font-size:13px;
 <div class="container">
 
 <div class="hero">
-
 <h2>تأمین عمده انواع کالا در سراسر ایران 🇮🇷</h2>
 
 <p>
@@ -225,14 +228,8 @@ font-size:13px;
 <strong>درخواست خرید خودت را ثبت کن.</strong>
 </p>
 
-<button onclick="goToBuy()">
-🛒 ثبت درخواست خرید
-</button>
-
-<button onclick="goToSupplier()">
-🏪 ثبت تأمین‌کننده
-</button>
-
+<button onclick="goToBuy()">🛒 ثبت درخواست خرید</button>
+<button onclick="goToSupplier()">🏪 ثبت تأمین‌کننده</button>
 </div>
 
 
@@ -240,47 +237,49 @@ font-size:13px;
 
 <h2>🛍️ دسته‌بندی کالاها</h2>
 
+<p>برای ثبت درخواست عمده، دسته موردنظر را انتخاب کنید:</p>
+
 <div class="categories">
 
-<div class="category">
+<button class="category" onclick="goToBuy()">
 <span>🧴</span>
 آرایشی و بهداشتی
-</div>
+</button>
 
-<div class="category">
+<button class="category" onclick="goToBuy()">
 <span>👕</span>
 پوشاک، کیف و کفش
-</div>
+</button>
 
-<div class="category">
+<button class="category" onclick="goToBuy()">
 <span>🏠</span>
 لوازم خانه و آشپزخانه
-</div>
+</button>
 
-<div class="category">
+<button class="category" onclick="goToBuy()">
 <span>📱</span>
 موبایل و لوازم جانبی
-</div>
+</button>
 
-<div class="category">
+<button class="category" onclick="goToBuy()">
 <span>🔌</span>
 لوازم برقی و دیجیتال
-</div>
+</button>
 
-<div class="category">
+<button class="category" onclick="goToBuy()">
 <span>🍽️</span>
 مواد غذایی و کالاهای مصرفی
-</div>
+</button>
 
-<div class="category">
+<button class="category" onclick="goToBuy()">
 <span>🧰</span>
 ابزار و تجهیزات
-</div>
+</button>
 
-<div class="category">
+<button class="category" onclick="goToBuy()">
 <span>📦</span>
 سایر کالاها
-</div>
+</button>
 
 </div>
 
@@ -468,7 +467,6 @@ window.open(
 
 }
 
-
 function goToSupplier(){
 
 window.open(
@@ -477,7 +475,6 @@ window.open(
 );
 
 }
-
 
 async function checkCode(){
 
