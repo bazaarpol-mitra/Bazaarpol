@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="enamad" content="47720139" />
+<meta name="enamad" content ="47720139"/>
 
 <title>برزن کلان‌پک | تأمین عمده استرچ پالت و ملزومات بسته‌بندی</title>
 
@@ -251,8 +251,7 @@ color:#64748b
 </div>
 
 <p>
-تأمین عمده استرچ پالت برای کارخانه‌ها، انبارها،
-مراکز پخش، شرکت‌ها و کسب‌وکارهای سراسر ایران.
+تأمین عمده استرچ پالت برای کارخانه‌ها، انبارها، مراکز پخش، شرکت‌ها و کسب‌وکارهای سراسر ایران.
 </p>
 
 <div class="stretch-products">
@@ -324,13 +323,16 @@ color:#64748b
 </div>
 
 <div class="note">
+
 محصول یا مشخصات موردنظر خود را پیدا نکردید؟
 <br>
+
 <strong>درخواست خود را ثبت کنید.</strong>
 
 <button class="main-button" onclick="goToBuy()">
 ثبت درخواست / استعلام قیمت
 </button>
+
 </div>
 
 </div>
@@ -402,8 +404,7 @@ color:#64748b
 <h2>🏭 تأمین‌کننده هستید؟</h2>
 
 <p>
-اگر تولیدکننده یا تأمین‌کننده ملزومات بسته‌بندی صنعتی هستید،
-برای همکاری اطلاعات خود را ثبت کنید.
+اگر تولیدکننده یا تأمین‌کننده ملزومات بسته‌بندی صنعتی هستید، برای همکاری اطلاعات خود را ثبت کنید.
 </p>
 
 <button class="main-button" onclick="goToSupplier()">
@@ -474,11 +475,13 @@ placeholder="مثلاً BP-1001"
 </div>
 
 <footer>
+
 برزن کلان‌پک
 <br>
 تأمین عمده ملزومات بسته‌بندی صنعتی در سراسر ایران 🇮🇷
 <br><br>
 © برزن کلان‌پک
+
 </footer>
 
 <script>
@@ -503,28 +506,23 @@ window.open(
 
 async function checkCode(){
 
-const code=
-document.getElementById("code").value.trim();
+const code=document.getElementById("code").value.trim();
 
-const result=
-document.getElementById("result");
+const result=document.getElementById("result");
 
 if(code===""){
 
-result.innerHTML=
-"⚠️ لطفاً کد پیگیری را وارد کنید";
+result.innerHTML="⚠️ لطفاً کد پیگیری را وارد کنید";
 
 return;
 
 }
 
-result.innerHTML=
-"⏳ در حال بررسی...";
+result.innerHTML="⏳ در حال بررسی...";
 
 try{
 
-const response=
-await fetch("tracking.json?x="+Date.now());
+const response=await fetch("tracking.json?x="+Date.now());
 
 if(!response.ok){
 
@@ -532,25 +530,21 @@ throw new Error("خطا");
 
 }
 
-const data=
-await response.json();
+const data=await response.json();
 
 if(data[code]){
 
-result.innerHTML=
-"✅ وضعیت درخواست: "+data[code];
+result.innerHTML="✅ وضعیت درخواست: "+data[code];
 
 }else{
 
-result.innerHTML=
-"❌ کد پیگیری پیدا نشد";
+result.innerHTML="❌ کد پیگیری پیدا نشد";
 
 }
 
 }catch(error){
 
-result.innerHTML=
-"⚠️ خطا در دریافت اطلاعات پیگیری";
+result.innerHTML="⚠️ خطا در دریافت اطلاعات پیگیری";
 
 }
 
